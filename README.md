@@ -5,5 +5,3 @@
 ```shell
 sh crd-model-generator.sh
 ```
-
-# k8s-controllers
