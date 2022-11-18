@@ -1,0 +1,8 @@
+apiVersion: jinternals.com/v1
+kind: DevPortal
+metadata:
+  name: dev-portal-1
+  namespace: applications
+spec:
+  replicas: 1
+
