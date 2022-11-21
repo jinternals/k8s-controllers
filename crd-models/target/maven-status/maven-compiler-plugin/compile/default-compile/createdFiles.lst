@@ -1,3 +1,4 @@
-com/jinternals/stable/models/V1CronTab.class
-com/jinternals/stable/models/V1CronTabSpec.class
-com/jinternals/stable/models/V1CronTabList.class
+com/jinternals/models/V1SwaggerPortalList.class
+com/jinternals/models/V1SwaggerPortalSpec.class
+com/jinternals/models/V1SwaggerPortal.class
+com/jinternals/models/V1SwaggerPortalStatus.class

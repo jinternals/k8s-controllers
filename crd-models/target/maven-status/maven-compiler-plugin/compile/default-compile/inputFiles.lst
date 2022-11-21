@@ -1,3 +1,4 @@
-/Users/mradul/Projects/k8s-controllers/crd-models/src/main/java/com/jinternals/stable/models/V1CronTabList.java
-/Users/mradul/Projects/k8s-controllers/crd-models/src/main/java/com/jinternals/stable/models/V1CronTab.java
-/Users/mradul/Projects/k8s-controllers/crd-models/src/main/java/com/jinternals/stable/models/V1CronTabSpec.java
+/Users/mradul/Projects/k8s-controllers/crd-models/src/main/java/com/jinternals/models/V1SwaggerPortal.java
+/Users/mradul/Projects/k8s-controllers/crd-models/src/main/java/com/jinternals/models/V1SwaggerPortalList.java
+/Users/mradul/Projects/k8s-controllers/crd-models/src/main/java/com/jinternals/models/V1SwaggerPortalStatus.java
+/Users/mradul/Projects/k8s-controllers/crd-models/src/main/java/com/jinternals/models/V1SwaggerPortalSpec.java

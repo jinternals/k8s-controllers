@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: my-service
+  name: my-service-1
   annotations:
-    dev-portal: "true"
+    swagger-portal: "true"
 spec:
   selector:
     app.kubernetes.io/name: MyApp

@@ -1,7 +1,7 @@
 apiVersion: jinternals.com/v1
-kind: DevPortal
+kind: SwaggerPortal
 metadata:
-  name: dev-portal-1
+  name: swagger-portal-1
   namespace: applications
 spec:
   replicas: 1
