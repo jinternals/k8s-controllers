@@ -33,15 +33,28 @@ spec:
               description: DevPortalSpec defines the desired state of DevPortal
               type: object
               properties:
-                name:
-                  description: Name your foo, fool!
-                  type: string
                 replicas:
                   type: integer
+                  minimum: 1
+                  default: 1
+                replaceUrlsIn:
+                  type: string
+                data:
+                  additionalProperties:
+                    type: string
+                  description: Free form key value pairs
+                  type: object
             status:
               type: object
               description: DevPortalStatus defines the observed state of DevPortal
               properties:
                 name:
                   type: string
-
+      additionalPrinterColumns:
+        - jsonPath: .spec.replicas
+          name: Replicas
+          type: integer
+          description: The number of pod launched by the dev portal
+        - name: Age
+          type: date
+          jsonPath: .metadata.creationTimestamp

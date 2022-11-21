@@ -19,12 +19,11 @@ import java.time.Duration;
 @Component
 public class DevPortalReconciler implements Reconciler {
 
-    K8sDeploymentDeployer k8sDeploymentDeployer;
-    K8sConfigMapDeployer k8sConfigMapDeployer;
-
+    private K8sDeploymentDeployer k8sDeploymentDeployer;
+    private K8sConfigMapDeployer k8sConfigMapDeployer;
     private SharedInformer<V1Service> serviceSharedInformer;
     private SharedInformer<V1DevPortal> devPortalSharedInformer;
-    private Lister<V1Service> serviceLister;
+
     private Lister<V1DevPortal> devPortalLister;
 
     public DevPortalReconciler(
@@ -32,7 +31,6 @@ public class DevPortalReconciler implements Reconciler {
             SharedIndexInformer<V1DevPortal> devPortalSharedInformer, K8sDeploymentDeployer k8sDeploymentDeployer, K8sConfigMapDeployer k8sConfigMapDeployer) {
         this.devPortalSharedInformer = devPortalSharedInformer;
         this.serviceSharedInformer = serviceSharedInformer;
-        this.serviceLister = new Lister<>(serviceSharedInformer.getIndexer(), "");
         this.devPortalLister = new Lister<>(devPortalSharedInformer.getIndexer(), "");
         this.k8sDeploymentDeployer = k8sDeploymentDeployer;
         this.k8sConfigMapDeployer = k8sConfigMapDeployer;

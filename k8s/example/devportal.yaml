@@ -5,4 +5,11 @@ metadata:
   namespace: applications
 spec:
   replicas: 1
-
+  replaceUrlsIn: "hello.yaml"
+  data:
+    hello.yaml: |
+      demo:
+        name: name
+    bye.yaml: |
+      bye: bye
+      a: a1

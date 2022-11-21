@@ -31,7 +31,7 @@ import java.io.IOException;
  * DevPortal is the Schema for the devpopral API
  */
 @ApiModel(description = "DevPortal is the Schema for the devpopral API")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-18T06:29:52.957Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-19T15:08:28.367Z[Etc/UTC]")
 public class V1DevPortal implements io.kubernetes.client.common.KubernetesObject {
   public static final String SERIALIZED_NAME_API_VERSION = "apiVersion";
   @SerializedName(SERIALIZED_NAME_API_VERSION)

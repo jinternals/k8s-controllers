@@ -28,7 +28,7 @@ import java.io.IOException;
  * DevPortalStatus defines the observed state of DevPortal
  */
 @ApiModel(description = "DevPortalStatus defines the observed state of DevPortal")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-18T06:29:52.957Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-19T15:08:28.367Z[Etc/UTC]")
 public class V1DevPortalStatus {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)

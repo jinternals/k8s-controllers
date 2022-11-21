@@ -23,42 +23,80 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * DevPortalSpec defines the desired state of DevPortal
  */
 @ApiModel(description = "DevPortalSpec defines the desired state of DevPortal")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-18T06:29:52.957Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-19T15:08:28.367Z[Etc/UTC]")
 public class V1DevPortalSpec {
-  public static final String SERIALIZED_NAME_NAME = "name";
-  @SerializedName(SERIALIZED_NAME_NAME)
-  private String name;
+  public static final String SERIALIZED_NAME_DATA = "data";
+  @SerializedName(SERIALIZED_NAME_DATA)
+  private Map<String, String> data = null;
+
+  public static final String SERIALIZED_NAME_REPLACE_URLS_IN = "replaceUrlsIn";
+  @SerializedName(SERIALIZED_NAME_REPLACE_URLS_IN)
+  private String replaceUrlsIn;
 
   public static final String SERIALIZED_NAME_REPLICAS = "replicas";
   @SerializedName(SERIALIZED_NAME_REPLICAS)
   private Integer replicas;
 
 
-  public V1DevPortalSpec name(String name) {
+  public V1DevPortalSpec data(Map<String, String> data) {
     
-    this.name = name;
+    this.data = data;
+    return this;
+  }
+
+  public V1DevPortalSpec putDataItem(String key, String dataItem) {
+    if (this.data == null) {
+      this.data = new HashMap<>();
+    }
+    this.data.put(key, dataItem);
     return this;
   }
 
    /**
-   * Name your foo, fool!
-   * @return name
+   * Free form key value pairs
+   * @return data
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Name your foo, fool!")
+  @ApiModelProperty(value = "Free form key value pairs")
 
-  public String getName() {
-    return name;
+  public Map<String, String> getData() {
+    return data;
   }
 
 
-  public void setName(String name) {
-    this.name = name;
+  public void setData(Map<String, String> data) {
+    this.data = data;
+  }
+
+
+  public V1DevPortalSpec replaceUrlsIn(String replaceUrlsIn) {
+    
+    this.replaceUrlsIn = replaceUrlsIn;
+    return this;
+  }
+
+   /**
+   * Get replaceUrlsIn
+   * @return replaceUrlsIn
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getReplaceUrlsIn() {
+    return replaceUrlsIn;
+  }
+
+
+  public void setReplaceUrlsIn(String replaceUrlsIn) {
+    this.replaceUrlsIn = replaceUrlsIn;
   }
 
 
@@ -70,6 +108,7 @@ public class V1DevPortalSpec {
 
    /**
    * Get replicas
+   * minimum: 1
    * @return replicas
   **/
   @javax.annotation.Nullable
@@ -94,13 +133,14 @@ public class V1DevPortalSpec {
       return false;
     }
     V1DevPortalSpec v1DevPortalSpec = (V1DevPortalSpec) o;
-    return Objects.equals(this.name, v1DevPortalSpec.name) &&
+    return Objects.equals(this.data, v1DevPortalSpec.data) &&
+        Objects.equals(this.replaceUrlsIn, v1DevPortalSpec.replaceUrlsIn) &&
         Objects.equals(this.replicas, v1DevPortalSpec.replicas);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, replicas);
+    return Objects.hash(data, replaceUrlsIn, replicas);
   }
 
 
@@ -108,7 +148,8 @@ public class V1DevPortalSpec {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class V1DevPortalSpec {\n");
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    data: ").append(toIndentedString(data)).append("\n");
+    sb.append("    replaceUrlsIn: ").append(toIndentedString(replaceUrlsIn)).append("\n");
     sb.append("    replicas: ").append(toIndentedString(replicas)).append("\n");
     sb.append("}");
     return sb.toString();
