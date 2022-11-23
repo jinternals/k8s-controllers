@@ -1,0 +1,15 @@
+apiVersion: jinternals.com/v1
+kind: SwaggerPortal
+metadata:
+  name: swagger-portal-1
+  namespace: applications
+spec:
+  replicas: 1
+  replaceUrlsIn: "hello.yaml"
+  data:
+    hello.yaml: |
+      demo:
+        name: name
+    bye.yaml: |
+      bye: bye
+      a: a1

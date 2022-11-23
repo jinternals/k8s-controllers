@@ -1,0 +1,7 @@
+com/jinternals/controllers/k3sTestContainerSetup.class
+com/jinternals/controllers/k3sContextInitializer.class
+com/jinternals/controllers/utils/ResourceUtilsTest.class
+com/jinternals/controllers/ApiTestConfiguration.class
+com/jinternals/controllers/utils/SwaggerPortalUtilsTest.class
+com/jinternals/controllers/utils/ServiceUtilsTest.class
+com/jinternals/controllers/ApplicationTest.class

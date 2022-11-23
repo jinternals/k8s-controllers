@@ -17,28 +17,29 @@ import io.kubernetes.client.openapi.models.V1DeploymentList;
 import io.kubernetes.client.openapi.models.V1Service;
 import io.kubernetes.client.openapi.models.V1ServiceList;
 import io.kubernetes.client.util.generic.GenericKubernetesApi;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.ApplicationRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import java.time.Duration;
+import java.util.concurrent.Executors;
 
+@Slf4j
 @Configuration
 public class SwaggerPortalConfiguration {
 
-    @Bean
-    public CommandLineRunner commandLineRunner(
-            SharedInformerFactory sharedInformerFactory,
-            Controller controller
-    ) {
-        return args -> {
-            System.out.println("starting informers..");
-            sharedInformerFactory.startAllRegisteredInformers();
 
-            System.out.println("running controller..");
+    @Bean
+    ApplicationRunner runner(SharedInformerFactory sharedInformerFactory, Controller controller) {
+        var executorService = Executors.newCachedThreadPool();
+        return args -> executorService.execute(() -> {
+            log.info("starting informers..");
+            sharedInformerFactory.startAllRegisteredInformers();
+            log.info("running controller..");
             controller.run();
-        };
+        });
     }
 
     @Bean

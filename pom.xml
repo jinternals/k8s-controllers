@@ -20,6 +20,7 @@
         <client-java-spring-integration.version>16.0.2</client-java-spring-integration.version>
         <spring-boot-dependencies.version>2.7.5</spring-boot-dependencies.version>
         <kindcontainer.version>1.2.3</kindcontainer.version>
+        <testcontainers-bom.version>1.17.6</testcontainers-bom.version>
     </properties>
 
     <dependencyManagement>
@@ -37,10 +38,11 @@
                 <scope>import</scope>
             </dependency>
             <dependency>
-                <groupId>com.dajudge.kindcontainer</groupId>
-                <artifactId>kindcontainer</artifactId>
-                <version>${kindcontainer.version}</version>
-                <scope>test</scope>
+                <groupId>org.testcontainers</groupId>
+                <artifactId>testcontainers-bom</artifactId>
+                <version>${testcontainers-bom.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>
